@@ -1,0 +1,7 @@
+{
+    "scale": 3,
+    "iter": 16000,
+    "lossLog": "D:\\PyCharmProjects\\pytorch_GAN_zoo\\checkpoints\\utkface_vis\\utkface_vis_losses.pkl",
+    "refVectors": "D:\\PyCharmProjects\\pytorch_GAN_zoo\\checkpoints\\utkface_vis\\utkface_vis_refVectors.pt",
+    "runningLoss": {}
+}

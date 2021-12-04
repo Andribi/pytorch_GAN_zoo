@@ -1,0 +1,1 @@
+{"pathDB": "D:\\PyCharmProjects\\A2MF_AP\\UTKFace\\utkface", "pathAttribDict": "D:\\PyCharmProjects\\pytorch_GAN_zoo\\utkface_attr.json", "config": {"maxIterAtScale": [48000, 96000, 96000, 96000, 96000, 96000, 200000], "depthScales": [256, 256, 256, 128, 64, 32, 16]}}
