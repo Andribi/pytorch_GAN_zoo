@@ -7,6 +7,7 @@ from .gan_trainer import GANTrainer
 from ..utils.utils import getMinOccurence
 import torch.nn.functional as F
 
+from torchinfo import summary
 
 class ProgressiveGANTrainer(GANTrainer):
     r"""
@@ -72,6 +73,8 @@ class ProgressiveGANTrainer(GANTrainer):
         config = {key: value for key, value in vars(self.modelConfig).items()}
         config["depthScale0"] = self.modelConfig.depthScales[0]
         self.model = ProgressiveGAN(useGPU=self.useGPU, **config)
+        # summary(self.model.getNetG(), input_size=(16, 532))
+        # summary(self.model.getNetD(), input_size=(16, 3, 4, 4))
 
     def readTrainConfig(self, config):
         r"""
@@ -207,7 +210,8 @@ class ProgressiveGANTrainer(GANTrainer):
             pathBaseConfig = os.path.join(self.checkPointDir, self.modelLabel
                                           + "_train_config.json")
             self.saveBaseConfig(pathBaseConfig)
-
+            # summary(self.model.getNetG(), input_size=(16, 532))
+            # summary(self.model.getNetD(), input_size=(16, 3, 256, 256))
         for scale in range(self.startScale, n_scales):
 
             self.updateDatasetForScale(scale)

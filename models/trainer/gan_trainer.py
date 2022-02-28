@@ -469,6 +469,9 @@ class GANTrainer():
 
         for item, data in enumerate(dbLoader, 0):
 
+            # print(item)
+            # print(data)
+
             inputs_real = data[0]
             labels = data[1]
 

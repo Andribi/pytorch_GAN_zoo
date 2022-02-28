@@ -1,0 +1,2 @@
+python train.py --np_vis PGAN -c D:\PyCharmProjects\pytorch_GAN_zoo\utkface_config.json -n utkface_v1_net -d D:\PyCharmProjects\pytorch_GAN_zoo\checkpoints -s 8000
+python eval.py visualization --np_vis -d D:\PyCharmProjects\pytorch_GAN_zoo\checkpoints -n utkface_vis -m PGAN --race_2 1.0 --save_dataset D:\PyCharmProjects\pytorch_GAN_zoo\generated --size_dataset 50

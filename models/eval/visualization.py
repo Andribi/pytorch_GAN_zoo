@@ -23,7 +23,7 @@ def getModelName(pathConfig):
 def updateParserWithLabels(parser, labels):
 
     for key in labels:
-        parser.add_argument('--' + key, type=str,
+        parser.add_argument('--' + key, type=float,
                             help=str(labels[key]["values"]))
     return parser
 

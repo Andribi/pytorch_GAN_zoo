@@ -1,6 +1,5 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 import torch.optim as optim
-
 from .base_GAN import BaseGAN
 from .utils.config import BaseConfig
 from .networks.progressive_conv_net import GNet, DNet
@@ -69,7 +68,6 @@ class ProgressiveGAN(BaseGAN):
         # If new scales are added, give the generator a blending layer
         if self.config.depthOtherScales:
             gnet.setNewAlpha(self.config.alpha)
-
         return gnet
 
     def getNetD(self):
